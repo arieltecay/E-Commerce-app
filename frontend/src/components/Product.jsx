@@ -1,7 +1,6 @@
 import Rating from "./Rating";
 
 const Product = ({ product }) => {
-    console.log(product);
   return (
     <div>
       {product && (
@@ -14,12 +13,10 @@ const Product = ({ product }) => {
               <h2>{product.name}</h2>
             </a>
             <div className="rating">
-              {product.rating}
-              <Rating />
-             
+              <Rating rating={product.rating} numReviews={product.numReviews} />
             </div>
             <div className="price">${product.price}</div>
-            <div className="price">{product.descriptio }</div>
+            <div className="price">{product.descriptio}</div>
           </div>
         </div>
       )}
