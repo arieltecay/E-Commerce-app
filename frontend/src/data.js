@@ -1,4 +1,4 @@
-export const data = {
+const data = {
   products: [
     {
       id: 1,
@@ -9,6 +9,7 @@ export const data = {
       brand: "Lenovo",
       rating: 4.5,
       numReviews: 10,
+      countInStock: 8,
       description:
         "High quality of product and create for work it´s not a notebook gamer",
     },
@@ -21,6 +22,7 @@ export const data = {
       brand: "Logitech",
       rating: 4,
       numReviews: 7,
+      countInStock: 0,
       description: "Mouse gamer created for more confortability",
     },
     {
@@ -32,6 +34,7 @@ export const data = {
       brand: "Exo",
       rating: 3.5,
       numReviews: 5,
+      countInStock: 8,
       description: "Notebook create for work in office",
     },
     {
@@ -43,6 +46,7 @@ export const data = {
       brand: "Apple",
       rating: 4.8,
       numReviews: 11,
+      countInStock: 8,
       description: "Macbook pro for the best design and general work",
     },
     {
@@ -54,7 +58,9 @@ export const data = {
       brand: "HP",
       rating: 4.3,
       numReviews: 9,
+      countInStock: 8,
       description: "Notebook for office and play games with the touch panel",
     },
   ],
 };
+export default data;

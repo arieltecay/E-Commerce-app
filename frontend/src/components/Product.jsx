@@ -5,7 +5,7 @@ const Product = ({ product }) => {
     <div>
       {product && (
         <div className="card" key={product.id}>
-          <a href={`/products/${product.id}`}>
+          <a href={`/product/${product.id}`}>
             <img className="medium" src={product.image} alt="Product" />
           </a>
           <div className="card-body">
