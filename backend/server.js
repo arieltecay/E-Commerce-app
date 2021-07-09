@@ -10,7 +10,9 @@ app.get("/api/products", (req, res) => {
 app.get("/", (req, res) => {
   res.send("server si Ready!!!");
 });
-const port = process.env.PORT || 4000;
-app.listen(5000, () => {
+
+const port = process.env.PORT ||5000;
+
+app.listen(() => {
   console.log(`Server Runing on port ${port}`);
 });
