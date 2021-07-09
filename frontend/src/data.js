@@ -1,7 +1,7 @@
 const data = {
   products: [
     {
-      id: 1,
+      _id: 1,
       name: "Lenovo Stylus 340",
       category: "Notebooks",
       image: "/images/p1.jpg",
@@ -14,7 +14,7 @@ const data = {
         "High quality of product and create for work it´s not a notebook gamer",
     },
     {
-      id: 2,
+      _id: 2,
       name: "Logitech 2500",
       category: "Mouses",
       image: "/images/p2.jpg",
@@ -26,7 +26,7 @@ const data = {
       description: "Mouse gamer created for more confortability",
     },
     {
-      id: 3,
+      _id: 3,
       name: "Notebook Exo",
       category: "Notebooks",
       image: "../images/p3.png",
@@ -38,7 +38,7 @@ const data = {
       description: "Notebook create for work in office",
     },
     {
-      id: 4,
+      _id: 4,
       name: "Macbook pro i7 10910",
       category: "Notebook",
       image: "/images/p4.png",
@@ -50,7 +50,7 @@ const data = {
       description: "Macbook pro for the best design and general work",
     },
     {
-      id: 5,
+      _id: 5,
       name: "Notebook hp slim & Touchable",
       category: "Notebooks",
       image: "/images/p5.png",

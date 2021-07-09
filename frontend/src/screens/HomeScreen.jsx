@@ -6,7 +6,7 @@ const HomeScreen = () => {
     <div>
       <div className="row center">
         {data.products.map((prod) => (
-          <Product key={prod.id} product={prod} />
+          <Product key={prod._id} product={prod} />
         ))}
       </div>
     </div>
