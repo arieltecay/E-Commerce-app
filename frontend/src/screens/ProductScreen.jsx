@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Rating from "../components/Rating";
 
 export default function ProductScreen(props) {
-  const id = props.match.params.id;
+  // const id = props.match.params.id;
   // console.log(data.products);
   const product = data.products.find((x) => x._id === 5);
   if (!product) {
