@@ -13,6 +13,6 @@ app.get("/", (req, res) => {
 
 const port = process.env.PORT ||5000;
 
-app.listen(() => {
+app.listen(port,() => {
   console.log(`Server Runing on port ${port}`);
 });
