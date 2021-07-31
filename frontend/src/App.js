@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import { BrowserRouter, Route } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { CartScreen } from "./screens/CartScreen";
+import CartScreen from "./screens/CartScreen";
 import HomeScreen from "./screens/HomeScreen";
 import ProductScreen from "./screens/ProductScreen";
 
