@@ -6,12 +6,14 @@ import HomeScreen from "./screens/HomeScreen";
 import OrderHistoryScreen from "./screens/OrderHistoryScreen";
 import OrderScreen from "./screens/OrderScreen";
 import { signout } from "./actions/userActions";
+import PrivateRoute from "./components/PrivateRoute";
 import ProductScreen from "./screens/ProductScreen";
 import SigninScreen from "./screens/SigninScreen";
 import RegisterScreen from "./screens/RegisterScreen";
 import ShippingAddressScreen from "./screens/ShippingAddressScreen";
 import PaymentMethodScreen from "./screens/PaymentMethodScreen";
 import PlaceOrderScreen from "./screens/PlaceOrderScreen";
+import ProfileScreen from "./screens/ProfileScreen";
 
 function App() {
   const cart = useSelector((state) => state.cart);
@@ -46,6 +48,9 @@ function App() {
                   </Link>
                   <ul className="dropdown-content">
                     <li>
+                      <Link to="/profile">User Profile</Link>
+                    </li>
+                    <li>
                       <Link to="/orderhistory">Order History</Link>
                     </li>
                     <li>
@@ -70,6 +75,10 @@ function App() {
             <Route path="/placeorder" component={PlaceOrderScreen}></Route>
             <Route path="/orderHistory" component={OrderHistoryScreen}></Route>
             <Route path="/order/:id" component={OrderScreen}></Route>
+            <PrivateRoute
+              path="/profile"
+              component={ProfileScreen}
+            ></PrivateRoute>
             <Route path="/" component={HomeScreen} exact />
           </main>
           <footer className="row center">
