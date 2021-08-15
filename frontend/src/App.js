@@ -3,6 +3,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 import { Link } from "react-router-dom";
 import CartScreen from "./screens/CartScreen";
 import HomeScreen from "./screens/HomeScreen";
+import OrderHistoryScreen from "./screens/OrderHistoryScreen";
 import OrderScreen from "./screens/OrderScreen";
 import { signout } from "./actions/userActions";
 import ProductScreen from "./screens/ProductScreen";
@@ -45,6 +46,9 @@ function App() {
                   </Link>
                   <ul className="dropdown-content">
                     <li>
+                      <Link to="/orderhistory">Order History</Link>
+                    </li>
+                    <li>
                       <Link to="#signout" onClick={signoutHandler}>
                         Sign Out
                       </Link>
@@ -64,6 +68,7 @@ function App() {
             <Route path="/shipping" component={ShippingAddressScreen}></Route>
             <Route path="/payment" component={PaymentMethodScreen}></Route>
             <Route path="/placeorder" component={PlaceOrderScreen}></Route>
+            <Route path="/orderHistory" component={OrderHistoryScreen}></Route>
             <Route path="/order/:id" component={OrderScreen}></Route>
             <Route path="/" component={HomeScreen} exact />
           </main>
