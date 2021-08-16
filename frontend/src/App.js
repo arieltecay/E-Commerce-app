@@ -7,11 +7,13 @@ import OrderHistoryScreen from "./screens/OrderHistoryScreen";
 import OrderScreen from "./screens/OrderScreen";
 import { signout } from "./actions/userActions";
 import PrivateRoute from "./components/PrivateRoute";
+import AdminRoute from "./components/AdminRoute";
 import ProductScreen from "./screens/ProductScreen";
 import SigninScreen from "./screens/SigninScreen";
 import RegisterScreen from "./screens/RegisterScreen";
 import ShippingAddressScreen from "./screens/ShippingAddressScreen";
 import PaymentMethodScreen from "./screens/PaymentMethodScreen";
+import ProductListScreen from "./screens/ProductListScreen";
 import PlaceOrderScreen from "./screens/PlaceOrderScreen";
 import ProfileScreen from "./screens/ProfileScreen";
 
@@ -31,7 +33,7 @@ function App() {
           <header className="row">
             <div>
               <Link className="brand" to="/">
-                E-Commerce
+                Menta Tucumán
               </Link>
             </div>
             <div>
@@ -100,6 +102,10 @@ function App() {
               path="/profile"
               component={ProfileScreen}
             ></PrivateRoute>
+            <AdminRoute
+              path="/productlist"
+              component={ProductListScreen}
+            ></AdminRoute>
             <Route path="/" component={HomeScreen} exact />
           </main>
           <footer className="row center">
