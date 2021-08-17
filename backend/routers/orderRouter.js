@@ -6,11 +6,11 @@ import { isAdmin, isAuth } from "../utils.js";
 const orderRouter = express.Router();
 
 orderRouter.get(
-  '/',
+  "/",
   isAuth,
   isAdmin,
   expressAsyncHandler(async (req, res) => {
-    const orders = await Order.find({}).populate('user', 'name');
+    const orders = await Order.find({}).populate("user", "name");
     res.send(orders);
   })
 );
@@ -56,6 +56,21 @@ orderRouter.get(
     const order = await Order.findById(req.params.id);
     if (order) {
       res.send(order);
+    } else {
+      res.status(404).send({ message: "Order Not Found" });
+    }
+  })
+);
+
+orderRouter.delete(
+  "/:id",
+  isAuth,
+  isAdmin,
+  expressAsyncHandler(async (req, res) => {
+    const order = await Order.findById(req.params.id);
+    if (order) {
+      const deleteOrder = await order.remove();
+      res.send({ message: "Order Deleted", order: deleteOrder });
     } else {
       res.status(404).send({ message: "Order Not Found" });
     }
