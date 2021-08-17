@@ -18,6 +18,7 @@ import {
   orderCreateReducer,
   orderDetailsReducer,
   orderMineListReducer,
+  orderListReducer,
 } from "./reducers/orderReducers";
 
 const initialState = {
@@ -50,6 +51,7 @@ const reducer = combineReducers({
   productCreate: productCreateReducer,
   productUpdate: productUpdateReducer,
   productDelete: productDeleteReducer,
+  orderList: orderListReducer,
 });
 const composeEnhacer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(
